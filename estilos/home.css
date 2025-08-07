@@ -1,0 +1,389 @@
+/*
+
+padding: espaço interno do elemento.                                      | display: grid: organiza os elementos em forma de grade.
+margin: espaço externo do elemento.                                       | grid-template-columns: define colunas da grade.
+margin-bottom: espaço abaixo de um elemento.                              | gap: espaço entre colunas/linhas no grid.
+color: cor do texto.                                                      | max-width: define a largura máxima de um bloco.
+text-align: alinhamento do texto (esquerda, centro, direita).             | background: cor de fundo.
+font-size: tamanho da fonte.                                              | border-radius: deixa os cantos arredondados.
+width: define largura.                                                    | overflow: hidden: corta o que “vaza” do tamanho definido.
+height: define altura.                                                    | transition: suaviza mudanças (como animações).
+text-decoration: controla sublinhado dos textos/links.                    | transform: movimenta/rotaciona/escalona elementos (usado no hover).
+font-weight: peso da fonte (ex: bold, normal).                            | box-shadow: cria sombra ao redor de um bloco.
+display: block: transforma o elemento em bloco (ocupa linha toda).        | object-fit: cover: faz a imagem preencher o espaço sem distorcer.
+cursor: cursor do mouse                                                   | :hover: aplica um estilo ao passar o mouse por cima.
+z-index: fica por cima de todo resto
+*/
+
+
+
+@charset "UTF-8";
+
+:root {
+  --cor01: #FF6300;
+  --cor02: #FBFBFB;
+  --cor03: #000000;
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor03);
+  color: var(--cor02);
+  font-family: var(--fonte-padrao);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Header */
+
+header {
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .botao {
+  background-color: var(--cor01);
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-weight: bold;
+  color: var(--cor02);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav .botao:hover {
+  background-color: #e05a00;
+}
+
+.menu a {
+  color: var(--cor02);
+  text-decoration: none;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--cor01);
+}
+
+
+/* main  "apresentação" */
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 50px;
+  gap: 40px;
+}
+
+.info {
+  max-width: 600px;
+}
+
+.info p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.info h1 {
+  color: var(--cor01);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.apresentacao .botao {
+  display: inline-block;
+  background-color: var(--cor01);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: var(--cor02);
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+        }
+
+.apresentacao .botao:hover {
+  background-color: #e05a00;
+}
+
+.foto {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-checkbox {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-conteudo {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.popup .botao,.popup .botao-fechar {
+  margin: 10px;
+  padding: 10px 20px;
+  background: var(--cor01);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;  /*vira mãozinha ao passar*/
+}
+
+.popup-checkbox:checked + .popup {
+  display: flex;
+}
+
+
+/* main "quem sou" */
+
+.eu {
+  margin: 60px 0;
+  text-align: center;
+}
+
+  .eu h2 {
+  color: var(--cor02);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.eu h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--cor01);
+}
+
+.eu p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+
+/* Barras */
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+  margin: 50px auto;
+        }
+
+.barras label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.barras input[type="range"] {
+  width: 100%;
+  height: 12px;
+  accent-color: var(--cor01); /* cor da parte de cima da barra */
+  background: var(--cor02);
+  border-radius: 6px;
+}
+
+
+/* Projetos */
+
+.projetos {
+  padding: 40px 0 60px;
+}
+
+.projetos h2 {
+  color: var(--cor02);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+}
+
+.projetos-container {   /*Responsável pela grade em colunas (um do lado do outro)*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projeto {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+}
+
+.projeto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.projeto a {
+  display: block;
+  padding: 12px;
+  background: #2a2a2a;
+  color: var(--cor02);
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.projeto a:hover {
+background: var(--cor01);
+}
+
+
+/* Contato */
+
+.teste {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.teste h2 {
+  color: var(--cor02);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.teste p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.teste .botao {
+  display: inline-block;
+  background-color: var(--cor01);
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-weight: bold;
+  color: var(--cor02);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.teste .botao:hover {
+  background-color: #e05a00;
+}
+
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: var(--cor01);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+.apresentacao {
+  flex-direction: column;
+  text-align: center;
+}
+            
+.info {
+  order: 2;
+}
+            
+.foto {
+  order: 1;
+  margin-bottom: 25px;
+}
+}
+
+@media (max-width: 600px) {
+
+nav {
+  flex-direction: column;
+  gap: 15px;
+}
+            
+.menu {
+  display: flex;
+  gap: 15px;
+}
+            
+.menu a {
+  margin-left: 0;
+}
+}

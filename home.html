@@ -1,0 +1,146 @@
+<!--
+
+<section> – separa blocos do conteúdo, tipo “sessões” da página.            | <header> – cabeçalho do site.
+<h2> – título de nível 2, normalmente usado para subtítulos de seções.      | <nav> – área de navegação, normalmente onde ficam os links do menu.
+<div> – contêiner genérico, serve para agrupar elementos.                   | <ul> – lista não ordenada (bullets).
+<a> – link clicável.                                                        | <li> – item de uma lista.
+<img> – exibe uma imagem.                                                   | <span> – texto em linha (sem quebrar linha, diferente do <div>).
+<br> – quebra de linha.                                                     | <main> – marca o conteúdo principal da página.
+<p> – parágrafo de texto.                                                   | <footer> – rodapé da página.
+<label> – etiqueta que identifica um campo do formulário,                   | <input> – campo onde o usuário digita ou seleciona dados, pode ser texto, senha, número, etc.
+facilita clicar no texto para ativar o input.                               
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="icone">
+    <link rel="stylesheet" href="estilos/home.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <header>
+            <nav>
+                <a href="https://docs.google.com/document/d/10Q_blonOs8DJ53xyBT4eCVHbhWCUlPKp3ARfRZ3rUbY/edit?usp=sharing" class="botao" target="_blank">Download CV</a>
+                <div class="menu">
+                    <a href="#quem-sou">Quem sou</a>
+                    <a href="#projetos">Meus projetos</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="apresentacao">
+                    <div class="info">
+                        <p>Olá, me chamo</p>
+                        <h1>Raphael Vinhola Westphal</h1>
+                        <p>Sou Desenvolvedor Front-end e Designer UI/UX</p>
+                        <label for="popup-toggle" class="botao">Colabore comigo</label> <!-- Botão que ativa o popup -->
+                    </div>
+                    <img src="imagens/foto-perfil.jpg" class="foto" alt="foto-perfil">
+                </div>
+
+                <!-- Checkbox escondido que controla o popup -->
+                <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+
+                <!-- Popup que aparece quando o checkbox está ativado -->
+                <div class="popup">
+                    <div class="popup-conteudo">
+                        <h2>Como deseja entrar em contato?</h2>
+                        <a href="raphinhavw@gmail.com" class="botao" target="_blank">Enviar Email</a>
+                        <a href="https://wa.me/51991418676" class="botao" target="_blank">Chamar no WhatsApp</a>
+                <!-- Botão para fechar o popup -->
+                        <label for="popup-toggle" class="botao-fechar">Fechar</label>
+                    </div>
+                </div>
+
+                <div class="eu">
+                    <h2 id="quem-sou">Quem Sou</h2>
+                    <p>Sou um desenvolvedor front-end em formação, buscando minha primeira experiência profissional para transformar tudo que venho aprendendo em soluções reais. Iniciei meus estudos com HTML e CSS, e agora estou começando a explorar JavaScript e TypeScript, expandindo minha base de conhecimento para criar projetos cada vez mais completos e interativos.<br><br>
+                    Meu foco está em construir interfaces simples, funcionais e que realmente façam sentido para quem usa. Mais do que entregar telas bonitas, quero colaborar na solução de problemas com clareza, propósito e inteligência. Trabalho com dedicação, responsabilidade e estou sempre em busca de evoluir — tanto tecnicamente quanto como parte de um time que cresce junto.<br><br>
+                    Se você procura alguém comprometido, com vontade de aprender e fazer a diferença desde o início, estou pronto para começar.</p>
+                </div>
+
+                <div class="barras">
+                    <label for="UX">UX</label>
+                    <input type="range" id="UX" value="70">
+                    
+                    <label for="UI">UI</label>
+                    <input type="range" id="UI" value="80">
+                    
+                    <label for="HTML e CSS">HTML & CSS</label>
+                    <input type="range" id="HTML e CSS" value="30">
+                </div>
+
+                <div class="projetos">
+                    <h2 id="projetos">Meus Projetos</h2>
+                    <div class="projetos-container">
+                        <div class="projeto">
+                            <img src="imagens/projeto-rede-social.png" alt="rede social">
+                            <a href="rede-social.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-conta-banco.png" alt="conta do banco">
+                            <a href="conta-banco.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-cv.png" alt="cv">
+                            <a href="cv.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-buscador-de-viagens.png" alt="buscador de viagens">
+                            <a href="buscador-viagens.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-pagina-de-compra.png" alt="pagina de compra">
+                            <a href="pagina-de-compra.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-tela-login.png" alt="tela de login">
+                            <a href="tela-login.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                        <div class="projeto">
+                            <img src="imagens/projeto-site-android-curso-em-video.png" alt="projeto site do android web">
+                            <a href="curso-em-video.html" target="_blank">Clique aqui para saber mais sobre esse projeto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teste">
+                    <h2>Entre em contato</h2>
+                    <p>Espero que tenha curtido tudo o que preparei para você nesta página. Se quiser tirar alguma dúvida, conversar sobre um projeto ou simplesmente bater um papo sobre ideias, é só clicar no botão abaixo.</p>
+                    <label for="popup-toggle" class="botao">Colabore comigo</label> <!-- Botão que ativa o popup -->
+                </div>
+
+                <!-- Checkbox escondido que controla o popup -->
+                <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+
+                <!-- Popup que aparece quando o checkbox está ativado -->
+                <div class="popup">
+                    <div class="popup-conteudo">
+                        <h2>Como deseja entrar em contato?</h2>
+                        <a href="raphinhavw@gmail.com" class="botao" target="_blank">Enviar Email</a>
+                        <a href="https://wa.me/51991418676" class="botao" target="_blank">Chamar no WhatsApp</a>
+                <!-- Botão para fechar o popup -->
+                        <label for="popup-toggle" class="botao-fechar">Fechar</label>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Site criado por <a href="https://github.com/Raphaelw20" target="_blank">Raphael Vinhola Westphal</a></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
