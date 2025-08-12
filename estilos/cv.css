@@ -38,7 +38,7 @@ img {
     align-items: center;
     border-radius: 5px;
     display: block;
-    max-width: 300px;
+    max-width: 200px;
     background-color: #FBFBFB;
     border: 1px solid var(--cor01)
 }

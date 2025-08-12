@@ -38,6 +38,7 @@ img {
     border-radius: 5px;
     display: block;
     max-width: 600px;
+    max-width: 200px;
 }
 
 img:hover {
