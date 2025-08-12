@@ -37,7 +37,6 @@ img {
     align-items: center;
     border-radius: 5px;
     display: block;
-    max-width: 100px;
 }
 
 img:hover {
