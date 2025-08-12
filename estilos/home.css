@@ -232,18 +232,8 @@ nav .botao:hover {
   accent-color: var(--cor01); /* cor da parte de cima da barra */
   background: var(--cor02);
   border-radius: 6px;
+  pointer-events: none; /* trava para não mexer */
 }
-
-input[type="range"] {
-  
-  /* suas cores e estilos */
-  background: linear-gradient(to right, orange 50%, #444 50%);
-  border-radius: 10px;
-
-  /* trava para não mexer */
-  pointer-events: none;
-}
-
 
 /* Projetos */
 
