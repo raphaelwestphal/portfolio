@@ -185,7 +185,7 @@ button {
             rgba(4, 12, 15, 0.85) 40%,
             rgba(4, 12, 15, 0.25) 100%
         ),
-        url("imagens/drone-campo.jpg") center/cover;
+        url("imagens/drone-campo") center/cover;
 
     overflow: hidden;
 }
