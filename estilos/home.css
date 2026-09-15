@@ -113,7 +113,7 @@ img { display: block; max-width: 100%; }
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../imagens/drone-campo.jpg") right center / cover no-repeat;
+    background: url("../imagens/capa.jpg") right center / cover no-repeat;
     transform: scaleX(-1);
 }
 
