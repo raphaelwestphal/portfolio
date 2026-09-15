@@ -182,153 +182,18 @@ button {
         linear-gradient(
             90deg,
             rgba(4, 12, 15, 0.98) 0%,
-            rgba(4, 12, 15, 0.85) 40%,
-            rgba(4, 12, 15, 0.25) 100%
+            rgba(4, 12, 15, 0.88) 35%,
+            rgba(4, 12, 15, 0.45) 65%,
+            rgba(4, 12, 15, 0.15) 100%
         ),
-        url("../imagens/drone-campo.jpg") center/cover;
+        url("../imagens/drone-campo.jpg");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 
     overflow: hidden;
 }
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,0.25),
-            transparent 50%,
-            #071014
-        );
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-text {
-    max-width: 680px;
-    padding-top: 70px;
-}
-
-.eyebrow,
-.section-label {
-    display: block;
-
-    color: var(--green);
-
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.hero h1 {
-    margin-top: 15px;
-
-    font-size: clamp(42px, 5vw, 68px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-}
-
-.hero h1 span {
-    color: var(--green);
-}
-
-.hero h2 {
-    margin-top: 18px;
-
-    font-size: clamp(20px, 2vw, 28px);
-    font-weight: 400;
-}
-
-.hero h2 strong {
-    color: var(--green);
-    font-weight: 400;
-}
-
-.hero p {
-    max-width: 610px;
-
-    margin-top: 22px;
-
-    color: #c2ccce;
-
-    font-size: 17px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-
-    margin-top: 30px;
-}
-
-.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 13px 23px;
-
-    border-radius: 30px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-.button svg {
-    width: 17px;
-}
-
-.button.primary {
-    background: var(--green);
-    color: #05120d;
-}
-
-.button.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(85,232,154,0.20);
-}
-
-.button.secondary {
-    border: 1px solid rgba(255,255,255,0.5);
-}
-
-.button.secondary:hover {
-    border-color: var(--green);
-    color: var(--green);
-}
-
-.hero-message {
-    position: absolute;
-
-    right: 8%;
-    bottom: 70px;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    z-index: 2;
-}
-
-.hero-message span {
-    width: 2px;
-    height: 55px;
-
-    background: var(--green);
-}
-
-.hero-message p {
-    color: white;
-    font-size: 13px;
-}
-
 
 /* ========================================
    SEÇÕES
