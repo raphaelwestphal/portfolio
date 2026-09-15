@@ -114,8 +114,7 @@ img { display: block; max-width: 100%; }
     position: absolute;
     inset: 0;
     background: url("../imagens/drone-campo.jpg") right center / cover no-repeat;
-    /* Se o drone estiver no lado ERRADO da foto, descomente a linha abaixo: */
-    /* transform: scaleX(-1); */
+    transform: scaleX(-1);
 }
 
 .hero-overlay {
