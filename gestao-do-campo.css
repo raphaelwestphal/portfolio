@@ -1,0 +1,196 @@
+/* ===== Gestão do Campo ===== */
+/* Cores claras e discretas */
+
+:root {
+  --fundo: #f6f8f5;          /* branco sujo com verdinho */
+  --card: #ffffff;
+  --verde: #5a8a6a;          /* verde sálvia principal */
+  --verde-escuro: #4a7459;
+  --texto: #2f3a33;          /* cinza escuro */
+  --texto-claro: #7a857c;    /* cinza claro */
+  --borda: #e4e8e3;
+
+  /* status em tons pastel */
+  --operando-fundo: #e3f2e6;
+  --operando-texto: #3e7a4e;   /* verde */
+  --galpao-fundo: #e3edf6;
+  --galpao-texto: #3e6a8a;     /* azul */
+  --manutencao-fundo: #f6e3e3;
+  --manutencao-texto: #8a3e3e; /* vermelho */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+/* ===== LOGIN ===== */
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(47,58,51,.08);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-logo { width: 96px; margin-bottom: 16px; }
+
+.login-card h1 { font-size: 26px; margin-bottom: 6px; }
+.login-card .sub { color: var(--texto-claro); margin-bottom: 32px; }
+
+.login-card input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  font-size: 15px;
+  margin-bottom: 14px;
+  background: var(--fundo);
+  color: var(--texto);
+  outline: none;
+}
+.login-card input:focus { border-color: var(--verde); }
+
+.btn-entrar {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: var(--verde);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.btn-entrar:hover { background: var(--verde-escuro); }
+
+.login-card .link { color: var(--texto-claro); font-size: 14px; text-decoration: none; }
+.login-card .link:hover { text-decoration: underline; }
+
+.login-card .aviso { color: var(--texto-claro); font-size: 13px; margin-top: 32px; }
+
+.login-erro { color: var(--manutencao-texto); font-size: 14px; margin-bottom: 12px; display: none; }
+
+/* ===== MENU TOPO ===== */
+.menu-topo {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  box-shadow: 0 2px 12px rgba(47,58,51,.06);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 0 32px;
+  height: 64px;
+  z-index: 10;
+}
+
+.menu-logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; }
+.menu-logo svg { width: 36px; }
+
+.menu-abas { display: flex; gap: 24px; flex: 1; }
+.menu-abas a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 15px;
+  padding: 20px 0;
+  border-bottom: 2px solid transparent;
+}
+.menu-abas a:hover { color: var(--texto); }
+.menu-abas a.ativa { color: var(--texto); border-bottom-color: var(--verde); }
+
+.menu-usuario { position: relative; }
+.menu-usuario-btn {
+  display: flex; align-items: center; gap: 10px;
+  background: none; border: none; cursor: pointer;
+  font-size: 15px; color: var(--texto);
+}
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--borda);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; color: var(--texto-claro);
+}
+.menu-dropdown {
+  position: absolute; right: 0; top: 48px;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(47,58,51,.1);
+  min-width: 160px;
+  display: none;
+  overflow: hidden;
+}
+.menu-dropdown.aberto { display: block; }
+.menu-dropdown a {
+  display: block; padding: 12px 16px;
+  color: var(--texto); text-decoration: none; font-size: 14px;
+}
+.menu-dropdown a:hover { background: var(--fundo); }
+
+/* ===== DASHBOARD ===== */
+.dash { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+
+.saudacao { text-align: center; margin-bottom: 40px; }
+.saudacao h2 { font-size: 30px; margin-bottom: 6px; }
+.saudacao .sub { color: var(--texto-claro); }
+
+.cards-numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px; }
+.card-numero {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(47,58,51,.06);
+  padding: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-numero .num { font-size: 34px; font-weight: 700; }
+.card-numero .label { color: var(--texto-claro); font-size: 14px; margin-top: 4px; }
+.card-numero svg { width: 32px; opacity: .6; }
+
+.dash-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.painel {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(47,58,51,.06);
+  padding: 28px;
+}
+.painel h3 { font-size: 20px; margin-bottom: 20px; }
+
+.tabela { width: 100%; border-collapse: collapse; }
+.tabela th { text-align: left; font-size: 14px; color: var(--texto-claro); padding: 10px 8px; border-bottom: 1px solid var(--borda); }
+.tabela td { padding: 14px 8px; border-bottom: 1px solid var(--borda); font-size: 15px; }
+.tabela tr:last-child td { border-bottom: none; }
+
+.pill { padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.pill.operando { background: var(--operando-fundo); color: var(--operando-texto); }
+.pill.galpao { background: var(--galpao-fundo); color: var(--galpao-texto); }
+.pill.manutencao { background: var(--manutencao-fundo); color: var(--manutencao-texto); }
+
+.lista-lateral { list-style: none; }
+.lista-lateral li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--borda); font-size: 15px; }
+.lista-lateral li:last-child { border-bottom: none; }
+.lista-lateral .data { color: var(--texto-claro); }
+
+/* seções (abas) */
+.secao { display: none; }
+.secao.ativa { display: block; }
+
+/* responsivo */
+@media (max-width: 900px) {
+  .cards-numeros { grid-template-columns: repeat(2, 1fr); }
+  .dash-grid { grid-template-columns: 1fr; }
+  .menu-abas { gap: 14px; }
+}
