@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão do Campo — Início</title>
+  <link rel="stylesheet" href="gestao-do-campo.css">
+</head>
+<body>
+  <!-- MENU TOPO -->
+  <header class="menu-topo">
+    <div class="menu-logo">
+      <svg viewBox="0 0 96 64" fill="none">
+        <path d="M32 8 C20 20 20 40 32 52 L32 8 Z" fill="#5a8a6a" opacity=".7"/>
+        <path d="M32 8 C44 20 44 40 32 52" stroke="#5a8a6a" stroke-width="3" fill="none"/>
+        <rect x="48" y="28" width="28" height="14" rx="4" fill="#5a8a6a"/>
+        <circle cx="54" cy="46" r="6" fill="#5a8a6a"/>
+        <circle cx="70" cy="46" r="6" fill="#5a8a6a"/>
+      </svg>
+      Gestão do Campo
+    </div>
+
+    <nav class="menu-abas">
+      <a href="#" class="ativa" data-secao="inicio">Início</a>
+      <a href="#" data-secao="maquinas">Máquinas</a>
+      <a href="#" data-secao="lavouras">Lavouras</a>
+      <a href="#" data-secao="operacoes">Operações</a>
+      <a href="#" data-secao="insumos">Insumos</a>
+      <a href="#" data-secao="relatorios">Relatórios</a>
+    </nav>
+
+    <div class="menu-usuario">
+      <button class="menu-usuario-btn" id="btnUsuario">
+        <span class="avatar" id="avatarIniciais">--</span>
+        <span id="nomeUsuario">Usuário</span>
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1 L6 6 L11 1" stroke="#7a857c" stroke-width="2"/></svg>
+      </button>
+      <div class="menu-dropdown" id="menuDropdown">
+        <a href="#">Meu perfil</a>
+        <a href="#" id="linkSair">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dash">
+    <!-- SEÇÃO INÍCIO -->
+    <section class="secao ativa" id="secao-inicio">
+      <div class="saudacao">
+        <h2 id="saudacaoNome">Bom dia!</h2>
+        <p class="sub">Visão geral da fazenda hoje</p>
+      </div>
+
+      <div class="cards-numeros">
+        <div class="card-numero">
+          <div><div class="num">5</div><div class="label">Máquinas ativas</div></div>
+          <svg viewBox="0 0 32 32" fill="none"><path d="M8 4 C4 8 4 16 8 20 L8 4 Z" fill="#5a8a6a"/></svg>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">3</div><div class="label">Operações hoje</div></div>
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="#5a8a6a" stroke-width="2"/></svg>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">127 ha</div><div class="label">Trabalhados</div></div>
+          <svg viewBox="0 0 32 32" fill="none"><rect x="8" y="12" width="16" height="8" rx="2" fill="#5a8a6a"/></svg>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">2</div><div class="label">Insumos chegando</div></div>
+          <svg viewBox="0 0 32 32" fill="none"><path d="M8 4 C4 8 4 16 8 20" stroke="#5a8a6a" stroke-width="2"/></svg>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="painel">
+          <h3>Máquinas em campo</h3>
+          <table class="tabela">
+            <thead><tr><th>Nome</th><th>Categoria</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>John Deere 8R</td><td>Trator</td><td><span class="pill operando">Operando</span></td></tr>
+              <tr><td>Case IH Magnum</td><td>Trator</td><td><span class="pill operando">Operando</span></td></tr>
+              <tr><td>New Holland CR</td><td>Colheitadeira</td><td><span class="pill galpao">Galpão</span></td></tr>
+              <tr><td>Valtra T250</td><td>Trator</td><td><span class="pill manutencao">Manutenção</span></td></tr>
+              <tr><td>Jacto Arbus</td><td>Pulverizador</td><td><span class="pill galpao">Galpão</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="painel">
+          <h3>Próximos recebimentos</h3>
+          <ul class="lista-lateral">
+            <li><span>Semente de soja</span><span class="data">12/10</span></li>
+            <li><span>Fertilizante NPK</span><span class="data">15/10</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO MÁQUINAS -->
+    <section class="secao" id="secao-maquinas">
+      <div class="painel">
+        <h3>Todas as máquinas</h3>
+        <table class="tabela">
+          <thead><tr><th>Nome</th><th>Categoria</th><th>Horas</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>John Deere 8R</td><td>Trator</td><td>2.340 h</td><td><span class="pill operando">Operando</span></td></tr>
+            <tr><td>Case IH Magnum</td><td>Trator</td><td>1.870 h</td><td><span class="pill operando">Operando</span></td></tr>
+            <tr><td>New Holland CR</td><td>Colheitadeira</td><td>980 h</td><td><span class="pill galpao">Galpão</span></td></tr>
+            <tr><td>Valtra T250</td><td>Trator</td><td>3.120 h</td><td><span class="pill manutencao">Manutenção</span></td></tr>
+            <tr><td>Jacto Arbus</td><td>Pulverizador</td><td>1.450 h</td><td><span class="pill galpao">Galpão</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEÇÃO LAVOURAS -->
+    <section class="secao" id="secao-lavouras">
+      <div class="painel">
+        <h3>Lavouras cadastradas</h3>
+        <table class="tabela">
+          <thead><tr><th>Talhão</th><th>Cultura</th><th>Área</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Talhão 1 — Sede</td><td>Soja</td><td>42 ha</td><td><span class="pill operando">Plantada</span></td></tr>
+            <tr><td>Talhão 2 — Baixada</td><td>Milho</td><td>35 ha</td><td><span class="pill operando">Plantada</span></td></tr>
+            <tr><td>Talhão 3 — Alto</td><td>Soja</td><td>28 ha</td><td><span class="pill galpao">Em preparo</span></td></tr>
+            <tr><td>Talhão 4 — Beira-rio</td><td>Trigo</td><td>22 ha</td><td><span class="pill manutencao">Correção de solo</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEÇÃO OPERAÇÕES -->
+    <section class="secao" id="secao-operacoes">
+      <div class="painel">
+        <h3>Operações de hoje</h3>
+        <table class="tabela">
+          <thead><tr><th>Operação</th><th>Máquina</th><th>Talhão</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Plantio de soja</td><td>John Deere 8R</td><td>Talhão 1</td><td><span class="pill operando">Em andamento</span></td></tr>
+            <tr><td>Pulverização</td><td>Case IH Magnum</td><td>Talhão 2</td><td><span class="pill operando">Em andamento</span></td></tr>
+            <tr><td>Colheita de trigo</td><td>New Holland CR</td><td>Talhão 4</td><td><span class="pill galpao">Aguardando</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEÇÃO INSUMOS -->
+    <section class="secao" id="secao-insumos">
+      <div class="painel">
+        <h3>Estoque de insumos</h3>
+        <table class="tabela">
+          <thead><tr><th>Insumo</th><th>Em estoque</th><th>Próximo recebimento</th></tr></thead>
+          <tbody>
+            <tr><td>Semente de soja</td><td>120 sacas</td><td>12/10</td></tr>
+            <tr><td>Fertilizante NPK</td><td>8 t</td><td>15/10</td></tr>
+            <tr><td>Defensivo — Glifosato</td><td>340 L</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SEÇÃO RELATÓRIOS -->
+    <section class="secao" id="secao-relatorios">
+      <div class="painel">
+        <h3>Relatórios</h3>
+        <p style="color:var(--texto-claro); font-size:15px;">Em breve: relatórios de produtividade, custos por talhão e horas por máquina.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
