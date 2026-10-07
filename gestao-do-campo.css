@@ -324,3 +324,14 @@ body {
 .campo input:focus { outline: none; border-color: var(--verde); }
 .aviso-salvo { display: none; color: var(--operando-texto); font-size: 14px; text-align: center; }
 .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+/* ===== BOTÕES DE AÇÃO ===== */
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 12px; flex-wrap: wrap; }
+.toolbar-acoes { display: flex; gap: 8px; }
+.btn-acao { padding: 8px 14px; border-radius: 8px; border: 1px solid var(--borda); background: var(--card); color: var(--texto); font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all .2s; }
+.btn-acao:hover { border-color: var(--verde); color: var(--verde); }
+.btn-acao svg { width: 14px; height: 14px; }
+.btn-editar { padding: 6px 10px; font-size: 12px; border-radius: 6px; }
+.btn-exportar { background: var(--verde); color: #fff; border-color: var(--verde); }
+.btn-exportar:hover { background: var(--verde-escuro); color: #fff; }
+.busca { padding: 8px 12px; border-radius: 8px; border: 1px solid var(--borda); background: var(--fundo); font-size: 13px; color: var(--texto); min-width: 180px; }
