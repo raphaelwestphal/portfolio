@@ -531,3 +531,29 @@ img { display: block; max-width: 100%; }
     color: #dfe7e4;
 }
 
+}
+
+/* ===== CONTATO ===== */
+.contact { background: var(--background); }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr auto; gap: 50px; align-items: center; }
+.contact-intro p { max-width: 340px; margin-top: 14px; color: var(--text-muted); }
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-item { display: flex; align-items: center; gap: 13px; color: #cbd3d4; font-size: 13px; }
+.contact-item svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--green); }
+.contact-button { min-width: 210px; }
+
+/* ===== FOOTER ===== */
+.footer { padding: 22px 0; border-top: 1px solid var(--border); background: #050d10; }
+.footer-content { display: flex; align-items: center; justify-content: center; gap: 16px; color: #778386; font-size: 11px; text-align: center; }
+.footer-content strong { color: #cbd3d4; font-weight: 600; }
+
+/* ===== CONTATO E FOOTER NO CELULAR ===== */
+@media (max-width: 1000px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+    .contact-button { justify-self: flex-start; }
+}
+@media (max-width: 450px) {
+    .contact-item span { overflow-wrap: anywhere; }
+    .contact-button { width: 100%; }
+    .footer-content { flex-direction: column; gap: 10px; }
+}
