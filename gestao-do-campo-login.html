@@ -9,7 +9,6 @@
 <body>
   <div class="login-wrap">
     <div class="login-card">
-      <!-- logo: folha + trator -->
       <svg class="login-logo" viewBox="0 0 96 64" fill="none">
         <path d="M32 8 C20 20 20 40 32 52 L32 8 Z" fill="#5a8a6a" opacity=".7"/>
         <path d="M32 8 C44 20 44 40 32 52" stroke="#5a8a6a" stroke-width="3" fill="none"/>
@@ -18,21 +17,14 @@
         <circle cx="70" cy="46" r="6" fill="#5a8a6a"/>
       </svg>
       <h1>Gestão do Campo</h1>
-      <p class="sub">Acesse sua conta</p>
+      <p class="sub">Sistema de demonstração</p>
 
-      <p class="login-erro" id="loginErro">E-mail ou senha incorretos.</p>
+      <button type="button" id="botaoEntrar" class="btn-entrar">Entrar</button>
 
-      <form id="formLogin">
-        <input type="email" id="inputEmail" placeholder="E-mail" required>
-        <input type="password" id="inputSenha" placeholder="Senha" required>
-        <button type="submit" class="btn-entrar">Entrar</button>
-      </form>
-
-      <a href="#" class="link">Esqueci minha senha</a>
-      <p class="aviso">Não tem conta? Fale com o administrador</p>
+      <p class="aviso">Clique em Entrar para acessar o painel</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="gestao-do-campo.js"></script>
 </body>
 </html>
