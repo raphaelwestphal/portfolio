@@ -305,3 +305,5 @@ body {
 @media (max-width: 500px) {
     .linha-ranking { grid-template-columns: 90px 1fr auto; font-size: 13px; }
 }
+
+.barra.amarelo { background: #d4933a; }
