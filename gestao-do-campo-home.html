@@ -36,7 +36,7 @@
         <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1 L6 6 L11 1" stroke="#7a857c" stroke-width="2"/></svg>
       </button>
       <div class="menu-dropdown" id="menuDropdown">
-        <a href="#">Meu perfil</a>
+        <a href="#" id="linkPerfil">Meu perfil</a>
         <a href="#" id="linkSair">Sair</a>
       </div>
     </div>
@@ -265,6 +265,40 @@
           </p>
         </div>
 
+      </div>
+    </section>
+
+        <!-- SEÇÃO PERFIL (ADMIN) -->
+    <section class="secao" id="secao-perfil">
+      <div class="painel painel-perfil">
+        <h3>Meu perfil</h3>
+
+        <div class="perfil-topo">
+          <img id="fotoPerfil" class="foto-perfil oculta" src="" alt="Foto de perfil">
+          <div id="fotoPlaceholder" class="foto-placeholder">📷</div>
+          <div class="foto-acoes">
+            <label for="inputFoto" class="btn-pequeno">Escolher foto</label>
+            <input type="file" id="inputFoto" accept="image/*" hidden>
+            <button type="button" id="btnRemoverFoto" class="btn-pequeno btn-vermelho">Remover foto</button>
+          </div>
+        </div>
+
+        <form id="formPerfil" class="form-perfil">
+          <div class="campo">
+            <label for="perfilNome">Nome</label>
+            <input type="text" id="perfilNome" placeholder="Seu nome completo" required>
+          </div>
+          <div class="campo">
+            <label for="perfilEmail">E-mail</label>
+            <input type="email" id="perfilEmail" placeholder="voce@fazenda.com" required>
+          </div>
+          <div class="campo">
+            <label for="perfilTelefone">Telefone</label>
+            <input type="tel" id="perfilTelefone" placeholder="(51) 99999-9999">
+          </div>
+          <button type="submit" class="btn-entrar">Salvar dados</button>
+          <p id="perfilAviso" class="aviso-salvo">Dados salvos com sucesso! ✅</p>
+        </form>
       </div>
     </section>
   </main>
