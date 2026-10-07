@@ -557,3 +557,133 @@ img { display: block; max-width: 100%; }
     .contact-button { width: 100%; }
     .footer-content { flex-direction: column; gap: 10px; }
 }
+
+.skill-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+}
+.skill-icon svg { width: 20px; height: 20px; }
+.skill.html .skill-icon { color: #ff6a3c; background: rgba(255,106,60,.14); }
+.skill.css .skill-icon { color: #4aa8ff; background: rgba(74,168,255,.14); }
+.skill.js .skill-icon { color: #f7df1e; background: rgba(247,223,30,.12); }
+.skill.ts .skill-icon { color: #519aba; background: rgba(49,120,198,.16); }
+.skill.react .skill-icon { color: #61dafb; background: rgba(97,218,251,.12); }
+.skill.git .skill-icon { color: #f05033; background: rgba(240,80,51,.14); }
+.skill.excel .skill-icon { color: #4caf7d; background: rgba(76,175,125,.14); }
+.skill.erp .skill-icon { color: #aab5b7; background: rgba(255,255,255,.08); }
+
+.skills-message {
+    display: flex;
+    gap: 16px;
+    padding-left: 26px;
+    border-left: 2px solid var(--green);
+}
+.skills-message > svg { width: 30px; flex-shrink: 0; color: var(--green); }
+.skills-message h3 { font-size: 18px; }
+.skills-message p { margin-top: 8px; color: #b6c2bf; font-size: 13px; }
+
+/* =========== CONTATO =========== */
+.contact { background: var(--background); }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr auto;
+    gap: 50px;
+    align-items: center;
+}
+.contact-intro p { max-width: 340px; margin-top: 14px; color: var(--text-muted); }
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #cbd3d4;
+    font-size: 13px;
+}
+.contact-item svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--green); }
+.contact-button { min-width: 210px; }
+
+/* =========== FOOTER =========== */
+.footer {
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+    background: #050d10;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #778386;
+    font-size: 11px;
+    text-align: center;
+}
+.footer-content strong { color: #cbd3d4; font-weight: 600; }
+
+/* =========== RESPONSIVO =========== */
+@media (max-width: 1000px) {
+    .nav { gap: 18px; }
+    .hero-message { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image img { height: 340px; }
+    .qualities { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .experience-grid { grid-template-columns: 1fr; }
+    .skills-content { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+    .contact-button { justify-self: flex-start; }
+}
+@media (max-width: 900px) {
+    .header { height: 65px; padding: 0 5%; }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 65px; left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 25px;
+        background: #071014;
+        border-bottom: 1px solid var(--border);
+    }
+    .nav.open { display: flex; }
+    .nav a.active::after { display: none; }
+    .menu-mobile { display: block; }
+    .hero-content { padding-top: 65px; }
+}
+@media (max-width: 700px) {
+    .section { padding: 80px 0; }
+    .section h2 { font-size: 30px; }
+    .skills-section h2 { font-size: 30px; }
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .projects-grid { grid-template-columns: 1fr; }
+    .hero h2 { font-size: 17px; }
+    .hero h2 strong { margin: 0 6px; }
+    .hero-text p { font-size: 14px; }
+    .about-image img { height: 300px; }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+@media (max-width: 450px) {
+    .hero h1 { font-size: 34px; letter-spacing: -1px; }
+    .qualities { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .button { width: 100%; }
+    .about-image img { height: 260px; }
+    .experience-card { padding: 20px; }
+    .contact-item span { overflow-wrap: anywhere; }
+    .contact-button { width: 100%; }
+}
