@@ -156,11 +156,115 @@
       </div>
     </section>
 
-    <!-- SEÇÃO RELATÓRIOS -->
+        <!-- SEÇÃO RELATÓRIOS -->
     <section class="secao" id="secao-relatorios">
-      <div class="painel">
-        <h3>Relatórios</h3>
-        <p style="color:var(--texto-claro); font-size:15px;">Em breve: relatórios de produtividade, custos por talhão e horas por máquina.</p>
+      <div class="saudacao">
+        <h2>Relatórios e indicadores</h2>
+        <p class="sub">Visão consolidada da fazenda — atualizado agora</p>
+      </div>
+
+      <!-- KPIs (resumão) -->
+      <div class="kpi-grid">
+        <div class="card-numero">
+          <div><div class="num">9.760 h</div><div class="label">Horas totais de máquina</div></div>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">127 ha</div><div class="label">Área total cadastrada</div></div>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">3</div><div class="label">Operações ativas hoje</div></div>
+        </div>
+        <div class="card-numero">
+          <div><div class="num">5</div><div class="label">Máquinas na frota</div></div>
+        </div>
+      </div>
+
+      <!-- Grid principal -->
+      <div class="relatorio-grid">
+
+        <!-- Ranking de horas por máquina -->
+        <div class="painel">
+          <h3>Horas por máquina (ranking)</h3>
+          <div class="bloco-ranking">
+            <div class="linha-ranking">
+              <span class="nome">Valtra</span>
+              <div class="barra-wrap"><div class="barra vermelho" style="width:100%"></div></div>
+              <span class="valor">3.120 h</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">John Deere 8R</span>
+              <div class="barra-wrap"><div class="barra" style="width:75%"></div></div>
+              <span class="valor">2.340 h</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">Case</span>
+              <div class="barra-wrap"><div class="barra" style="width:60%"></div></div>
+              <span class="valor">1.870 h</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">Stara</span>
+              <div class="barra-wrap"><div class="barra azul" style="width:46%"></div></div>
+              <span class="valor">1.450 h</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">New Holland</span>
+              <div class="barra-wrap"><div class="barra azul" style="width:31%"></div></div>
+              <span class="valor">980 h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distribuição por cultura -->
+        <div class="painel">
+          <h3>Área por cultura</h3>
+          <div class="bloco-ranking">
+            <div class="linha-ranking">
+              <span class="nome">Soja</span>
+              <div class="barra-wrap"><div class="barra" style="width:55%"></div></div>
+              <span class="valor">70 ha</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">Milho</span>
+              <div class="barra-wrap"><div class="barra azul" style="width:28%"></div></div>
+              <span class="valor">35 ha</span>
+            </div>
+            <div class="linha-ranking">
+              <span class="nome">Arroz</span>
+              <div class="barra-wrap"><div class="barra vermelho" style="width:17%"></div></div>
+              <span class="valor">22 ha</span>
+            </div>
+          </div>
+
+          <ul class="lista-relatorio" style="margin-top: 28px;">
+            <li><span class="dot"></span><span class="nome-rel">Talhões plantados</span><span class="valor-rel">2</span></li>
+            <li><span class="dot laranja"></span><span class="nome-rel">Talhões em preparo</span><span class="valor-rel">1</span></li>
+            <li><span class="dot vermelho"></span><span class="nome-rel">Correção de solo</span><span class="valor-rel">1</span></li>
+          </ul>
+        </div>
+
+        <!-- Status das operações -->
+        <div class="painel">
+          <h3>Operações de hoje</h3>
+          <ul class="lista-relatorio">
+            <li><span class="dot"></span><span class="nome-rel">Plantio de soja — Talhão 1</span><span class="pill operando" style="padding:4px 10px; font-size:11px;">Em andamento</span></li>
+            <li><span class="dot"></span><span class="nome-rel">Pulverização — Talhão 3</span><span class="pill operando" style="padding:4px 10px; font-size:11px;">Em andamento</span></li>
+            <li><span class="dot laranja"></span><span class="nome-rel">Plantio de soja — Talhão 4</span><span class="pill galpao" style="padding:4px 10px; font-size:11px;">Aguardando</span></li>
+          </ul>
+        </div>
+
+        <!-- Estoque de insumos -->
+        <div class="painel">
+          <h3>Estoque de insumos</h3>
+          <ul class="lista-relatorio">
+            <li><span class="dot"></span><span class="nome-rel">Semente de soja</span><span class="valor-rel">120 sacas</span></li>
+            <li><span class="dot azul"></span><span class="nome-rel">Fertilizante</span><span class="valor-rel">8 t</span></li>
+            <li><span class="dot laranja"></span><span class="nome-rel">Defensivo (Glifosato)</span><span class="valor-rel">340 L</span></li>
+          </ul>
+          <p style="color: var(--texto-claro); font-size: 13px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--borda);">
+            📦 <strong>2 recebimentos programados:</strong> semente em 12/10 e fertilizante em 15/10
+          </p>
+        </div>
+
       </div>
     </section>
   </main>
