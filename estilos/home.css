@@ -117,3 +117,5 @@ img { display: block; max-width: 100%; }
     .button { width: 100%; }
     .contact-button { width: 100%; }
 }
+
+.skill.ia .skill-icon { color: #9b59b6; background: rgba(155, 89, 182, 0.14); }
