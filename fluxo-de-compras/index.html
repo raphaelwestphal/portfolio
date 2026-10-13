@@ -34,12 +34,56 @@
     </header>
 
     <main class="container">
-        <div class="tab-content" id="tab-dashboard">
-            <h2>Dashboard</h2>
-            <p>Em breve: Visão geral dos indicadores.</p>
-        </div>
-    </main>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <!-- ABA DASHBOARD -->
+        <section class="tab-content active" id="tab-dashboard">
+            <h2>Dashboard</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <span class="kpi-label">Pedidos Pendentes</span>
+                    <span class="kpi-value">24</span>
+                </div>
+                <div class="kpi-card warning">
+                    <span class="kpi-label">Atrasados</span>
+                    <span class="kpi-value">7</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">Notas Fiscais</span>
+                    <span class="kpi-value">156</span>
+                </div>
+                <div class="kpi-card danger">
+                    <span class="kpi-label">Estoque Crítico</span>
+                    <span class="kpi-value">9</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA PEDIDOS -->
+        <section class="tab-content" id="tab-pedidos">
+            <h2>Pedidos de Compra</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Data do Pedido</th>
+                        <th>Peça</th>
+                        <th>Fornecedor</th>
+                        <th>Qtd</th>
+                        <th>Status</th>
+                        <th>Previsão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>05/10/2026</td>
+                        <td>Filtro de Ar (JD-123)</td>
+                        <td>John Deere</td>
+                        <td>10</td>
+                        <td><span class="pill recebido">Recebido</span></td>
+                        <td>10/10/2026</td>
+                    </tr>
+                    <tr class="atrasado">
+                        <td>08/10/2026</td>
+                        <td>Bico Injetor (CNH-456)</td>
+                        <td>Case IH</td>
+                        <td>4</td>
+                        <td><span class="pill pendente
