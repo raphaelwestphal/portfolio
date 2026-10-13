@@ -1,1 +1,61 @@
+/* Variáveis de Tema */
+:root {
+    --bg-body: #f4f6f8;
+    --bg-header: #ffffff;
+    --bg-card: #ffffff;
+    --text-main: #1a202c;
+    --text-muted: #718096;
+    --border: #e2e8f0;
+    --primary: #2f855a;
+    --primary-hover: #276749;
+    --danger: #e53e3e;
+    --warning: #dd6b20;
+}
 
+[data-theme="dark"] {
+    --bg-body: #0f172a;
+    --bg-header: #1e293b;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --primary: #48bb78;
+    --primary-hover: #38a169;
+    --danger: #fc8181;
+    --warning: #f6ad55;
+}
+
+/* Reset e Base */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--bg-body); color: var(--text-main); transition: background 0.3s, color 0.3s; }
+a { text-decoration: none; color: inherit; }
+
+/* Header */
+.header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 5%; height: 70px; background: var(--bg-header);
+    border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100;
+    transition: background 0.3s;
+}
+.logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; }
+.logo svg { width: 24px; color: var(--primary); }
+.logo strong { color: var(--primary); }
+
+.nav { display: flex; gap: 24px; }
+.nav a { font-size: 14px; color: var(--text-muted); transition: 0.2s; padding-bottom: 22px; border-bottom: 2px solid transparent; }
+.nav a:hover, .nav a.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* Botão de Tema */
+.theme-toggle {
+    background: none; border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px; cursor: pointer; color: var(--text-main); display: flex;
+    transition: 0.2s;
+}
+.theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
+[data-theme="dark"] .icon-sun { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
+/* Container */
+.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
