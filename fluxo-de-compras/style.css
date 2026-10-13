@@ -59,3 +59,29 @@ a { text-decoration: none; color: inherit; }
 
 /* Container */
 .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+/* Abas */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* KPIs */
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 24px; }
+.kpi-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.kpi-label { display: block; font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+.kpi-value { display: block; font-size: 32px; font-weight: 700; color: var(--primary); }
+.kpi-card.warning .kpi-value { color: var(--warning); }
+.kpi-card.danger .kpi-value { color: var(--danger); }
+
+/* Tabela */
+.tabela { width: 100%; border-collapse: collapse; margin-top: 24px; background: var(--bg-card); border-radius: 12px; overflow: hidden; }
+.tabela th, .tabela td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+.tabela th { background: var(--bg-header); color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; }
+.tabela tr.atrasado, .tabela tr.critico { background: rgba(229, 62, 62, 0.08); }
+
+/* Pílulas de status */
+.pill { padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.pill.recebido { background: rgba(72, 187, 120, 0.15); color: #48bb78; }
+.pill.pendente { background: rgba(246, 173, 85, 0.15); color: #f6ad55; }
+.pill.aprovado { background: rgba(66, 153, 225, 0.15); color: #4299e1; }
+.pill.critico { background: rgba(229, 62, 62, 0.15); color: #fc8181; }
+.pill.atencao { background: rgba(246, 173, 85, 0.15); color: #f6ad55; }
